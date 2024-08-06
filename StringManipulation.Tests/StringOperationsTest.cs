@@ -24,6 +24,21 @@ namespace StringManipulation.Tests
         }
 
         [Fact]
+        public void RemoveWhitespace()
+        {
+            // Arrange
+            var strOperations = new StringOperations();
+
+            // Act
+            var result = strOperations.RemoveWhitespace("Hello Platzi");
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.NotEmpty(result);
+            Assert.Equal("HelloPlatzi", result);
+        }
+
+        [Fact]
         public void IsPalindrome_True()
         {
             // Arrange
@@ -48,6 +63,7 @@ namespace StringManipulation.Tests
             // Assert
             Assert.False(result);
         }
+
     }
 
 }
